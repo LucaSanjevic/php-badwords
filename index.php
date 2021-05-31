@@ -1,12 +1,8 @@
 <?php
-	$badword = $_GET["badword"];
+	$paragrafo = "Lorem ipsum dolor sit amet consectetur adipisicing elit.";
 
-    $paragrafo = "Lorem ipsum dolor $badword amet consectetur adipisicing elit.";
+   $paragrafo2 = str_replace($_GET["badword"], "***", $paragrafo);
 
- echo strlen($paragrafo);
- echo "<br>";                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
-
-   echo str_replace("$badword", "***", $paragrafo)
 
 ?>
 
@@ -19,5 +15,18 @@
     <title>Document</title>
 </head>
 <body>
+<p>
+<?php echo $paragrafo2 ?>
+</p>
+
+<p>
+<?php echo "<br>" ?> 
+</p>
+
+<p>
+<?php echo strlen($paragrafo2) ?> 
+</p>
+
+
 </body>
 </html>
